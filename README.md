@@ -6,3 +6,4 @@ create common vue project with normalized tools
 ### eslint
 ### airbnb js style
 ### webpack
+### husky
