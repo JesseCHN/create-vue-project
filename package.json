@@ -1,0 +1,22 @@
+{
+  "name": "create-vue-project",
+  "version": "0.0.1",
+  "description": "create common vue project with normalized tools",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesseCHN/create-vue-project.git"
+  },
+  "keywords": [
+    "create-vue-project"
+  ],
+  "author": "Jesse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JesseCHN/create-vue-project/issues"
+  },
+  "homepage": "https://github.com/JesseCHN/create-vue-project#readme"
+}
