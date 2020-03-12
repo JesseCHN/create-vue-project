@@ -1,3 +1,21 @@
 const aa = 3;
 const vv = 8;
-const aa = 1;
+console.warn(aa);
+console.warn(vv);
+class Point {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  toString() {
+    return `(${this.x}, ${this.y})`;
+  }
+}
+const a = new Point(1, 2);
+console.log(a);
+const testA = 111;
+const testB = 222;
+const plusOperate = (c, d) => c * d;
+console.log(plusOperate(testA, testB));
+console.log(`${testA}-${testB}`);
