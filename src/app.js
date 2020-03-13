@@ -1,3 +1,5 @@
+import './style.css';
+
 const aa = 3;
 const vv = 8;
 console.warn(aa);

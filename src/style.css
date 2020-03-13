@@ -1,0 +1,12 @@
+.hello {
+    color: red;
+    background: url('./assets/will.jpeg');
+    width: 100px;
+    height: 100px;
+}
+.icon {
+    color: red;
+    background: url('./assets/xxx.png');
+    width: 100px;
+    height: 100px;
+}

@@ -30,7 +30,25 @@ module.exports = {
         exclude: /node_modules/,
         use: 'eslint-loader',
       },
-      { test: /\.txt$/, use: 'raw-loader' },
+      { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
+      { test: /\.css$/, exclude: /node_modules/, use: ['style-loader', 'css-loader'] },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader',
+        ],
+      },
     ],
   },
   plugins: [
