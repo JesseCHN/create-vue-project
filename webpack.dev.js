@@ -4,6 +4,13 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   mode: 'development',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
+    chunkFilename: '[name].js',
+    publicPath: '',
+    pathinfo: false,
+  },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
     compress: true,
@@ -21,7 +28,8 @@ module.exports = merge(common, {
       { test: /\.css$/, exclude: /node_modules/, use: ['style-loader', 'css-loader'] },
     ],
   },
-  plugins: [],
+  plugins: [
+  ],
   devtool: 'eval-source-map',
   performance: {
     hints: 'warning',

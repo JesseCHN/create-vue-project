@@ -6,12 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     index: './src/app.js',
-  },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[contenthash].js',
-    chunkFilename: '[name].[contenthash].js',
-    publicPath: '',
+    polyfills: './src/polyfills.js',
   },
   target: 'web',
   plugins: [
@@ -25,6 +20,7 @@ module.exports = {
 
     },
     extensions: ['.js', '*'],
+    symlinks: false,
   },
   module: {
     rules: [
@@ -37,6 +33,7 @@ module.exports = {
       { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
+        include: path.resolve(__dirname, 'src'),
         use: [
           {
             loader: 'url-loader',
@@ -48,6 +45,7 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
+        include: path.resolve(__dirname, 'src'),
         use: [
           'file-loader',
         ],

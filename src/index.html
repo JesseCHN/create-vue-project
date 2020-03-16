@@ -6,6 +6,18 @@
     <title>vue project</title>
     <meta name="description" content="created by create-vue-project">
     <meta name="keywords" content="vue project">
+    <script>
+        var modernBrowser = (
+            'fetch' in window &&
+            'assign' in Object
+        );
+        if ( !modernBrowser ) {
+        var scriptElement = document.createElement('script');
+        scriptElement.async = false;
+        scriptElement.src = '/polyfills.0b09f13d17b7ab9a7d62.js';
+        document.head.appendChild(scriptElement);
+        }
+    </script>
 </head>
 <body>
     <input type="file" accept=".xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
