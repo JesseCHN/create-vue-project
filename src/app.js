@@ -1,4 +1,5 @@
 import './style.css';
+import { square } from './math';
 
 const aa = 3;
 const vv = 8;
@@ -14,6 +15,7 @@ class Point {
     return `(${this.x}, ${this.y})`;
   }
 }
+console.log(square(4));
 const a = new Point(1, 2);
 console.log(a);
 const testA = 111;
