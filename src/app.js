@@ -1,7 +1,10 @@
+import Vue from 'vue';
 import './style.css';
 import join from 'lodash/join';
 import _ from 'lodash';
-import { square } from './math';
+import { square } from './math'; // eslint-disable-line
+import App from './App.vue';
+
 
 const aa = 3;
 const vv = 8;
@@ -36,4 +39,14 @@ button.onclick = (e) => import(/* webpackChunkName: "lazy" */ './lazyLoad.js').t
 document.body.appendChild(button);
 
 
-import(/* webpackPreload: true */ './prefetchLoad'); // eslint-disable-line
+// import(/* webpackPreload: true */ './prefetchLoad');
+
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+  },
+  components: {
+    App,
+  },
+});

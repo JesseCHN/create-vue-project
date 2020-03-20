@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -13,9 +14,11 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({ template: './src/index.html' }),
     new webpack.HashedModuleIdsPlugin(),
+    new VueLoaderPlugin(),
   ],
   resolve: {
     alias: {
+      vue$: 'vue/dist/vue.esm.js',
       Utilities: path.resolve(__dirname, 'src/utilities/'),
 
     },
@@ -49,6 +52,10 @@ module.exports = {
         use: [
           'file-loader',
         ],
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
       },
     ],
   },
