@@ -19,3 +19,6 @@ preload(预加载)：当前导航下可能需要资源
 import(/* webpackPrefetch: true */ 'LoginModal');
 ```
 ### husky
+### karma
+#### PhantomJS jasmine karma-coverage Backstop.js
+#### e2e selenium-webdriver
